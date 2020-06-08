@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration Panel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/icon-font/css/Glyphter.css">
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/tablesaw.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar__content top-menu">
+      <div class="container--flex">
+        <div class="col--auto">
+          <a href="#wallet">
+            <i class="icon-wallet"></i>
+            <h2>1,500.00</h2>
+            <i class="icon-arrow-down-small"></i>
+          </a>
+        </div>
+        <div class="col--auto">
+          <div class="notification active">
+            <a href="#notification">
+              <i class="icon-notification"></i>
+              <i class="notification__indicate"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col--auto">
+          <a href="#profile">
+            <i class="icon-profile"></i>
+            <p>Leonardo Dicaprio</p>
+          </a>
+        </div>
+        <div class="col--auto">
+          <a href="#exit"><i class="icon-quit"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="side-bar active">
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+      <a href="#side-bar"><i class="fas fa-bars"></i></a>
+    </div>
+    <div class="side-bar__menu side-list">
+      <ul>
+        <li><a href="#general-statistic/links" class="active"><i class="icon-general"></i>General</a></li>
+        <li><a href="#details"><i class="icon-details"></i>Details</a></li>
+        <li><a href="#links"><i class="icon-links"></i>Links</a></li>
+        <li><a href="#banners"><i class="icon-banners"></i>Banners</a></li>
+        <li><a href="#personal-data"><i class="icon-personaldata"></i>Personal Data</a></li>
+        <li><a href="#payout"><i class="icon-payout"></i>Payout</a></li>
+        <li><a href="#postback"><i class="icon-postback"></i>Postback</a></li>
+      </ul>
+    </div>
+    <div class="side-bar__messenger">
+      <div id="mikhaele" class="messenger-contact active">
+        <h2>Your Manager</h2>
+        <i class="active_user"></i>
+        <img src="images/messenger_photo.png" alt="mikhaele">
+        <a href="#mikhaele">Mikhael E</a>
+      </div>
+    </div>
+    <div class="side-bar__menu--bottom top-menu">
+      <div class="container--flex">
+        <div class="col--auto">
+          <a href="#wallet">
+            <i class="icon-wallet"></i>
+            <h2>1,500.00</h2>
+            <i class="icon-arrow-down-small"></i>
+          </a>
+        </div>
+        <div class="col--auto">
+          <div class="notification active">
+            <a href="#notification">
+              <i class="icon-notification"></i>
+              <p>Notifications</p>
+              <i class="notification__indicate"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col--auto">
+          <a href="#profile">
+            <i class="icon-profile"></i>
+            <p>Leonardo Dicaprio</p>
+          </a>
+        </div>
+        <div class="col--auto">
+          <a href="#exit">
+            <i class="icon-quit"></i>
+            <p>Quit</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="sections">
+    <section class="general-statistic active margin-top">
+      <div class="container">
+        <h1>General statistic</h1>
+        <div class="general-statistic__date">
+          <div class="container--flex">
+            <div class="col-md-12 col-sm-12">
+              <div class="date__input">
+                <input type="date" name="start-date" id="start-date">
+                <input type="date" name="end-date" id="end-date">
+              </div>
+              <a href="#refresh" class="btn btn--icon"><i class="icon-refresh"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="general-statistic__summary container--inner">
+          <div class="container--flex">
+            <div class="col-sm-12 col-md-6">
+              <div class="summary margin--right">
+                <h2>Visit Signups</h2>
+                <p>124</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="summary margin--left">
+                <h2>Net deposit</h2>
+                <p>564</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="summary margin--right">
+                <h2>FTD</h2>
+                <p>445</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="summary margin--left">
+                <h2>Turn vver</h2>
+                <p>432</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="general-statistic__earnings-chart container--inner">
+          <h2>Earnings chart</h2>
+          <div class="tab-buttons">
+            <div class="color-tab active">
+              <i class="color-tab__circle color-tab__circle--blue"></i>
+              <label>Signups</label>
+              <input type="checkbox" id="signups" name="signups" value="signups">
+            </div>
+            <div class="color-tab active">
+              <i class="color-tab__circle color-tab__circle--orange"></i>
+              <label>FTD</label>
+              <input type="checkbox" id="ftd" name="ftd" value="ftd">
+            </div>
+            <div class="color-tab">
+              <i class="color-tab__circle color-tab__circle--green"></i>
+              <label>Earned</label>
+              <input type="checkbox" id="earned" name="earned" value="earned">
+            </div>
+          </div>
+          <div class="graph">
+            <!-- <img src="images/graph.png" alt="graph"> -->
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="links active">
+      <div class="container">
+        <h1>Links</h1>
+        <div class="container--inner">
+          <a href="#add" class="btn add-new">+ add new</a>
+          <table class="table-links tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h2>Home page</h2></td>
+                <td><a href="#" class="link--large">http://www.homepage.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Currently offer</h2></td>
+                <td><a href="#" class="link--large">http://www.currently.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Blurpix</h2></td>
+                <td><a href="#" class="link--large">http://www.bluprix.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Your Site</h2></td>
+                <td><a href="#" class="link--large">http://www.yoursite.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Google</h2></td>
+                <td><a href="#" class="link--large">http://www.google.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Facebook</h2></td>
+                <td><a href="#" class="link--large">http://www.facebook.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Dashboard</h2></td>
+                <td><a href="#" class="link--large">http://www.dashboard.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Blurax</h2></td>
+                <td><a href="#" class="link--large">http://www.blurax.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Piece of Wine</h2></td>
+                <td><a href="#" class="link--large">http://www.pieceofwine.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Twitter</h2></td>
+                <td><a href="#" class="link--large">http://www.twitter.com</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#add" class="btn add-new">+ add new</a>
+        </div>
+      </div>
+    </section>
+    <section class="banners">
+      <div class="container">
+        <h1>Banners</h1>
+        <div class="container--inner">
+          <a href="#add" class="btn add-new">+ add new</a>
+          <table class="table-links tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h2>Banner main</h2></td>
+                <td><a href="#" class="link--large">http://website.com/bannermain.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Sign up banner</h2></td>
+                <td><a href="#" class="link--large">http://website.com/signup.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Banner left side</h2></td>
+                <td><a href="#" class="link--large">http://website.com/leftside.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Vertical banner</h2></td>
+                <td><a href="#" class="link--large">http://website.com/vert.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Front banner</h2></td>
+                <td><a href="#" class="link--large">http://website.com/front.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+              <tr>
+                <td><h2>Horizontal banner</h2></td>
+                <td><a href="#" class="link--large">http://website.com/horizontal.gif</a></td>
+                <td><a href="#"><i class="icon-links"></i></a></td>
+                <td><a href="#"><i class="icon-trash"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#add" class="btn add-new">+ add new</a>
+        </div>
+      </div>
+    </section>
+    <section class="personal-data">
+      <div class="container">
+        <h1>Personal data</h1>
+        <form action="#" method="post">
+          <div class="personal-data--section">
+            <div class="container--inner container--flex">
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="name">Name</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="text" name="name" id="name" required>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="surname">Surname</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="text" name="surname" id="surname" required>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="email">E-mail</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="email" name="email" id="email" required>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="phone">Phone number</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="tel" name="phone" id="phone">
+              </div>
+            </div>
+          </div>
+          <div class="personal-data--section">
+            <div class="container--inner container--flex">
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="skype">Skype</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="text" name="skype" id="skype">
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="icq">ICQ</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="text" name="icq" id="icq">
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="msn">MSN</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="text" name="msn" id="msn">
+              </div>
+            </div>
+          </div>
+          <div class="personal-data--section">
+            <div class="container--inner container--flex">
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="wallet">Wallet</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="number" name="wallet" id="wallet">
+              </div>
+            </div>
+          </div>
+          <div class="personal-data--section">
+            <div class="container--inner container--flex">
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="set_password">Password</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="password" name="set_password" id="set_password" required>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <h2><label for="repeat_password">Repeat</label></h2>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <input type="password" name="repeat_password" id="repeat_password" required>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn">Save</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="overlay show" id="overlay">
+    <div class="modal" id="modal__login">
+      <h1>Login</h1>
+      <div class="container--flex">
+        <div class="col-md-4 col-sm-12 login__input">
+          <i class="icon-login"></i>
+          <input type="text" name="login" id="login" placeholder="login name">
+        </div>
+        <div class="col-md-4 col-sm-12 password__input">
+          <i class="icon-password"></i>
+          <input type="password" name="password" id="password" placeholder="password">
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <a href="#login" class="btn btn--long js--close-modal">Enter</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal__exit">
+      <h2>Do You really want to Quit?</h2>
+      <div class="modal__exit--buttons">
+        <a href="#" class="btn btn--gray js--close-modal">Cancel</a>
+        <a href="#" class="btn js--close-modal">Quit</a>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/tablesaw.js"></script>
+  <script src="vendor/tablesaw-init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="js/script.js" type="module"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
